@@ -13,7 +13,7 @@ const [options,setOptions] = React.useState([]);
      const { bindInput, bindOptions,suggestions, selectedIndex} = useAutoComplete({
         onChange: value => console.log(value),
         source:(search) => {
-               return options.filter((option) => option.text.includes(search))
+               return options.filter((option) => option.text.includes(search)).slice(0,4)
        }
     })
 
